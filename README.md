@@ -11,9 +11,14 @@ This project shows how to build microfronend using [React](https://react.dev/), 
 #### To build the project
 
 ```bash
-cd host
+cd ${mfe-directory}
 npm install
 ```
+
+where:
+- `${mfe-directory} ` is every micro frontend host and it could be these values:
+  - `home`
+  - `pdp`
 
 #### To run the project
 
