@@ -18,6 +18,5 @@ npm install
 #### To run the project
 
 ```bash
-cd host
-npm run
+npm start
 ```
