@@ -1,6 +1,5 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import Button from "./button";
 
 import "./index.css";
 
@@ -14,7 +13,6 @@ const App = () => (
       Home Page Content
     </div>
     <div>Language: JavaScript</div>
-    <Button/>
     <Footer/>
   </div>
 );

@@ -41,12 +41,14 @@ module.exports = (_, argv) => ({
 
   plugins: [
     new ModuleFederationPlugin({
-      name: "host",
+      name: "home",
       filename: "remoteEntry.js",
-      remotes: {},
+      remotes: {
+        home: "http://localhost:3000/remoteEntry.js"
+      },
       exposes: {
-        './Button':
-          './src/button',
+        './Header':'./src/Header.jsx',
+        './Footer':'./src/Footer.jsx'
       },
       shared: {
         ...deps,
