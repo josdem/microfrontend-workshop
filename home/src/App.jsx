@@ -12,7 +12,6 @@ const App = () => (
     <div className="my-10">
       Home Page Content
     </div>
-    <div>Language: JavaScript</div>
     <Footer/>
   </div>
 );
