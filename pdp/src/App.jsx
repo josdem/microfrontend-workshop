@@ -5,12 +5,13 @@ import "./index.scss";
 
 import Header from "home/Header";
 import Footer from "home/Footer";
+import PdpContent from "./PdpContent";
 
 const App = () => (
   <div className="mt-10 text-3xl mx-auto max-w-6xl">
     <Header/>
     <div className="my-10">
-      PDP Page Content
+      <PdpContent/>
     </div>
     <Footer/>
   </div>
