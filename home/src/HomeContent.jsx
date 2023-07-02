@@ -4,7 +4,7 @@ import {getProducts, currency} from "./products"
 
 
 export default function HomeContent() {
-    cons [products, setProducts] = useState([])
+    const [products, setProducts] = useState([])
 
     useEffect(() => {
         getProducts().then((products) => {
@@ -13,10 +13,15 @@ export default function HomeContent() {
     }, [])
 
     return (
-        <div className="my-10 grid grid-cols-4 gap-5">
+        <div className="grid grid-cols-4 gap-5">
         {products.map((product) => (
-            <div key={product.id}>
-                <p>{product.name}</p>
+            <div key={product.sku}>
+                <div className="flex">
+                    <a>{product.name}</a>
+                </div>
+                <div className="flex-end">
+                    <a>{currency.format(product.price)}</a>
+                </div>
             </div>
             ))}
     </div>
