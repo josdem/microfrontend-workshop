@@ -1,10 +1,10 @@
 import React,{ useState, useEffect } from "react";
-
+import {useParams} from "react-router-dom";
 import { getProductBySku, currency } from "home/products";
 
 
 export default function PdpContent() {
-    const sku = 100
+    const {sku} = useParams()
     const [product, setProduct] = useState(null)
 
     useEffect(() => {getProductBySku(sku).then(setProduct)}, [sku])
