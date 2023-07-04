@@ -14,4 +14,4 @@ export const login = (username, password) =>
     .then(data => {
         jwt.next(data.token);
         return data.token;
-    })
+    }).catch(error => console.error(error));
