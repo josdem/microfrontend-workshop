@@ -6,7 +6,7 @@ export default function CartContent() {
     const [token, setToken] = useState(null);
 
     useEffect(() => {
-        login("sophie", "123!")
+        login("josdem", "12345678")
         return jwt.subscribe((token) => setToken(token ?? ""));
     }, []);
 
