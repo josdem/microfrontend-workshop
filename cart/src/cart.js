@@ -1,6 +1,6 @@
 import { BehaviorSubject } from 'rxjs';
 
-const SERVER_URL = 'https://shopping.josdem.io/login/'
+const SERVER_URL = 'http://localhost:8085/login'
 
 export const jwt = new BehaviorSubject(null);
 
