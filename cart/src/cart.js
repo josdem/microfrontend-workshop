@@ -1,3 +1,4 @@
+import React, { useEffect, useState } from 'react';
 import { BehaviorSubject } from 'rxjs';
 
 const SERVER_URL = 'http://localhost:8085/login'
@@ -14,3 +15,16 @@ export const login = () =>
         jwt.next(token);
         return token;
     }).catch(error => console.error(error));
+
+
+export function useLoggedIn() {
+    const [loggedIn, setLoggedIn] = useState(!!jwt.value);
+    useEffect(() => {
+        setLoggedIn(!!jwt.value);
+        return jwt.subscribe(() => {
+            setLoggedIn(!!jwt.value);
+        });
+    }, []);
+    return loggedIn;
+
+}
