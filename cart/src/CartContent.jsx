@@ -12,8 +12,11 @@ export default function CartContent() {
     }, []);
 
 
-    return <div>
-        <div></div>JWT: {token}
-        <Login/></div>
+    return (
+        <div>
+            <div>JWT: {token}</div>
+            <Login/>
+        </div>
+    );
 }
 
