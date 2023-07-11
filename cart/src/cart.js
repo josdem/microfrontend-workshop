@@ -37,6 +37,7 @@ export const login = (username, password) =>
     .then(data => {
         const token = data.token;
         jwt.next(token);
+        getCart();
         return token;
     })
     .catch(error =>
