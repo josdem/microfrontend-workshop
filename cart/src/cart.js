@@ -1,22 +1,27 @@
 import React, { useEffect, useState } from 'react';
 import { BehaviorSubject } from 'rxjs';
 
-const SERVER_URL = 'https://shopping.josdem.io'
+const SERVER_URL = 'http://localhost:8085'
 
 export const jwt = new BehaviorSubject(null);
 export const cart = new BehaviorSubject(null);
 
 export const getCart = () =>
-    fetch(`${SERVER_URL}/cart`, {
+    fetch(`${SERVER_URL}/cart/`, {
+        method: 'POST',
         headers: {
-            "Content-Type": "application/json",
-            Authorization: `Bearer ${jwt.value}`,
+            "Content-Type": "application/json"
         },
+        body: JSON.stringify({
+            token: jwt.value
+        }),
     })
     .then(response => response.json())
     .then(data => {
-        cart.next(data);
-        return data;
+        const product = data[0];
+        console.log(product);
+        cart.next(product);
+        return product;
     })
     .catch(error =>
         console.error(error)
