@@ -1,20 +1,30 @@
 import React, { useEffect, useState } from 'react';
 import { BehaviorSubject } from 'rxjs';
 
-const SERVER_URL = 'http://localhost:8085/login'
+const SERVER_URL = 'https://shopping.josdem.io/login'
 
 export const jwt = new BehaviorSubject(null);
 
-export const login = () => 
+export const login = (username, password) => 
     fetch(SERVER_URL, {
-        method: 'GET'
+        method: 'POST',
+        headers: {
+            "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+            "username": username,
+            "password": password,
+        }),
     })
     .then(response => response.json())
     .then(data => {
         const token = data.token;
         jwt.next(token);
         return token;
-    }).catch(error => console.error(error));
+    })
+    .catch(error =>
+        console.error(error)
+    );
 
 
 export function useLoggedIn() {
