@@ -18,6 +18,9 @@ export const getCart = () =>
         cart.next(data);
         return data;
     })
+    .catch(error =>
+        console.error(error)
+    );
 
 export const login = (username, password) => 
     fetch(`${SERVER_URL}/login`, {
