@@ -25,6 +25,24 @@ export const addToCart = (id) =>
         console.error(error)
     );
 
+    export const clearCart = (id) =>
+    fetch(`${SERVER_URL}/cart/`, {
+        method: 'DELETE',
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            token: jwt.value
+        }),
+    })
+    .then(response => response.json())
+    .then(() => {
+        getCart();
+    })
+    .catch(error =>
+        console.error(error)
+    );
+
 export const getCart = () =>
     fetch(`${SERVER_URL}/cart/`, {
         method: 'POST',
