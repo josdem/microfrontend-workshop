@@ -25,15 +25,12 @@ export const addToCart = (id) =>
         console.error(error)
     );
 
-    export const clearCart = (id) =>
+    export const clearCart = () =>
     fetch(`${SERVER_URL}/cart/`, {
         method: 'DELETE',
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-            token: jwt.value
-        }),
     })
     .then(response => response.json())
     .then(() => {
