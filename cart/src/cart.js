@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BehaviorSubject } from 'rxjs';
 
-const SERVER_URL = 'https://shopping.josdem.io'
+const SERVER_URL = 'http://localhost:8085'
 
 export const jwt = new BehaviorSubject(null);
 export const cart = new BehaviorSubject(null);
@@ -53,8 +53,11 @@ export const getCart = () =>
     .then(response => response.json())
     .then(data => {
         const product = data[0];
-        console.log(product);
-        cart.next(product);
+        
+        cart.next(data);
+        cart.subscribe((value) => {
+            console.log("value: " + JSON.stringify(value));
+        });
         return product;
     })
     .catch(error =>
