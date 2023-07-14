@@ -24,7 +24,7 @@ export const addToCart = (sku) =>
         console.error(error)
     );
 
-    export const clearCart = () =>
+export const clearCart = () =>
     fetch(`${SERVER_URL}/cart/`, {
         method: 'DELETE',
         headers: {
