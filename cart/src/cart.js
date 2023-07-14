@@ -6,15 +6,14 @@ const SERVER_URL = 'http://localhost:8085'
 export const jwt = new BehaviorSubject(null);
 export const cart = new BehaviorSubject(null);
 
-export const addToCart = (id) =>
-    fetch(`${SERVER_URL}/cart/`, {
+export const addToCart = (sku) =>
+    fetch(`${SERVER_URL}/cart/${sku}`, {
         method: 'POST',
         headers: {
             "Content-Type": "application/json"
         },
         body: JSON.stringify({
-            token: jwt.value,
-            id: id
+            token: jwt.value
         }),
     })
     .then(response => response.json())
