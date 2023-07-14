@@ -29,7 +29,7 @@ export const addToCart = (id) =>
     fetch(`${SERVER_URL}/cart/`, {
         method: 'DELETE',
         headers: {
-            "Content-Type": "application/json"
+            "Content-Type": "application/json",
         },
     })
     .then(response => response.json())
@@ -52,13 +52,8 @@ export const getCart = () =>
     })
     .then(response => response.json())
     .then(data => {
-        const product = data[0];
-        
         cart.next(data);
-        cart.subscribe((value) => {
-            console.log("value: " + JSON.stringify(value));
-        });
-        return product;
+        return data;
     })
     .catch(error =>
         console.error(error)

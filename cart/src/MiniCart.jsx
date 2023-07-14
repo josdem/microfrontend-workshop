@@ -7,9 +7,7 @@ export default function MiniCart() {
     const [showCart, setShowCart] = useState(false);
 
     useEffect(() => {
-        console.log("Value from cart: " + JSON.stringify(cart));
         setItems(cart);
-        
         return cart.subscribe(val => setItems(val));
     }, []);
 
@@ -30,7 +28,7 @@ export default function MiniCart() {
                 style={{
                   width: 300,
                   top: "2rem",
-                  left: -250,
+                  left: 250,
                 }}
               >
                 <div
