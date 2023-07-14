@@ -1,6 +1,7 @@
 import React, {useEffect, useState} from "react";
 
 import { cart, clearCart } from "./cart";
+import { currency } from "home/products";
 
 export default function MiniCart() {
     const [items, setItems] = useState(undefined);
@@ -41,7 +42,7 @@ export default function MiniCart() {
                     <React.Fragment key={item.sku}>
                       <div>{item.name}</div>
                       <div className="text-right">
-                        {item.price}
+                        {currency.format(item.price)}
                       </div>
                     </React.Fragment>
                   ))}
@@ -49,7 +50,9 @@ export default function MiniCart() {
                   <div></div>
                   <div></div>
                   <div>
-                    <hr />
+                    {currency.format(
+                      items.reduce((a, v) => a + v.price, 0)
+                    )}
                   </div>
                 </div>
                 <div className="flex">
