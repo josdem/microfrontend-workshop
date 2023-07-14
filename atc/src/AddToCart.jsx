@@ -2,7 +2,7 @@ import { createEffect, createSignal, Show } from "solid-js"
 import { jwt, addToCart } from "cart/cart"
 
 export default ({id}) => {
-    const [leggedIn, setLoggedIn] = createSignal(false)
+    const [loggedIn, setLoggedIn] = createSignal(false)
 
     createEffect(() => {
         return jwt.subscribe((val) => setLoggedIn(!!val))
