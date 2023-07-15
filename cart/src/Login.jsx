@@ -1,6 +1,6 @@
-import React, {useState} from "react";
+import React, { useState } from "react";
 
-import { login, jwt, useLoggedIn } from "./cart";
+import { login, useLoggedIn } from "./cart";
 
 export default function Login() {
     const loggedIn = useLoggedIn();
@@ -9,20 +9,46 @@ export default function Login() {
     const [username, setUsername] = useState("josdem");
     const [password, setPassword] = useState("12345678");
 
-    if(loggedIn) {
+    if (loggedIn) {
         return null;
     }
 
     return (
         <>
-        <span onClick={ () => setShowLogin(!showLogin)}>
+          <span onClick={() => setShowLogin(!showLogin)}>
             <i className="ri-fingerprint-line text-2xl" id="showlogin"></i>
-        </span>
-        {showLogin && (<div className="absolute p-5 border-4 border-blue-800" style={{width: 300, top: "2rem"}}>
-            <input type="text" placeholder="username" className="border text-sm border-gray-400 p-2 rounded-md w-full" value={username} onChange={(e) => setUsername(e.target.value)}/>
-            <input type="text" placeholder="password" className="border text-sm border-gray-400 p-2 rounded-md w-full" value={password} onChange={(e) => setPassword(e.target.value)}/>
-            <button className="bg-green-900 text-white py-2 px-5 rounded-md w-full" onClick={() => login(username, password)} id="loginBtn">Login</button>
-        </div>)}
+          </span>
+          {showLogin && (
+            <div
+              className="absolute p-5 border-4 border-blue-800 bg-white rounded-xl text-black"
+              style={{
+                width: 300,
+                top: "2rem",
+                left: -250,
+              }}
+            >
+              <input
+                type="text"
+                placeholder="User Name"
+                value={username}
+                onChange={(evt) => setUsername(evt.target.value)}
+                className="border text-sm border-gray-400 p-2 rounded-md w-full"
+              />
+              <input
+                type="password"
+                value={password}
+                onChange={(evt) => setPassword(evt.target.value)}
+                className="border text-sm border-gray-400 p-2 rounded-md w-full mt-3"
+              />
+              <button
+                className="bg-green-900 text-white py-2 px-5 rounded-md text-sm mt-5"
+                onClick={() => login(username, password)}
+                id="loginbtn"
+              >
+                Login
+              </button>
+            </div>
+          )}
         </>
-    )
+      );
 }
