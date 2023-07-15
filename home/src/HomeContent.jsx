@@ -1,4 +1,5 @@
 import React,{useState, useEffect} from "react"
+import { Link } from "react-router-dom"
 
 import {getProducts, currency} from "./products"
 import {addToCart, useLoggedIn} from "cart/cart"
@@ -19,7 +20,10 @@ export default function HomeContent() {
         {products.map((product) => (
             <div key={product.sku}>
                 <div className="flex">
+                  <div className="flex-grow font-bold">
+                    <Link to={`/products/${product.sku}`}>{product.name}</Link>
                     <a>{product.name}</a>
+                  </div>
                 </div>
                 <div className="flex-end">
                     <a>{currency.format(product.price)}</a>
@@ -38,5 +42,5 @@ export default function HomeContent() {
             </div>
             ))}
     </div>
-    )
+    );
 }
