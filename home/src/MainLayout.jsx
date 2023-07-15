@@ -2,7 +2,7 @@ import React from "react";
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 
 import "remixicon/fonts/remixicon.css";
-import "./index.css";
+import "./index.scss";
 
 import Header from "home/Header";
 import Footer from "home/Footer";
