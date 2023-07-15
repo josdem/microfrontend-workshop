@@ -11,19 +11,19 @@ import HomeContent from "home/HomeContent";
 import CartContent from "cart/CartContent";
 
 export default function MainLayout() {
-    return (
-  <Router>
-  <div className="mt-10 text-3xl mx-auto max-w-6xl">
-    <Header/>
-    <div className="my-10">
-      <Switch>
-        <Route exact path="/" component={HomeContent} />
-        <Route path="/products/:sku" component={PdpContent} />
-        <Route path="/cart" component={CartContent} />
-      </Switch>
-    </div>
-    <Footer/>
-  </div>
-  </Router>
-);
-    }
+  return (
+    <Router>
+      <div className="text-3xl mx-auto max-w-6xl">
+        <Header />
+        <div className="my-10">
+          <Switch>
+            <Route exact path="/" component={HomeContent} />
+            <Route path="/products/:sku" component={PdpContent} />
+            <Route path="/cart" component={CartContent} />
+          </Switch>
+        </div>
+        <Footer />
+      </div>
+    </Router>
+  );
+}
