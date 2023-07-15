@@ -2,10 +2,10 @@ import { useState, useEffect } from 'react';
 import { cart } from "cart/cart";
 
 export function useCartCount() {
-    const [count, setCount] = useState(cart.items.length);
+    const [count, setCount] = useState(cart.cartItems.length);
 
     useEffect(() => {
-        cart.subscribe(({cartItems}) => setCount(cartItems.length));
+        cart.subscribe(({cartItems}) => setCount(cartItems));
     }, []);
     
     return count;
