@@ -29,13 +29,16 @@ export default function Login() {
             >
               <input
                 type="text"
-                placeholder="User Name"
+                placeholder="username"
+                id="username"
                 value={username}
                 onChange={(evt) => setUsername(evt.target.value)}
                 className="border text-sm border-gray-400 p-2 rounded-md w-full"
               />
               <input
                 type="password"
+                placeholder="password"
+                id="password"
                 value={password}
                 onChange={(evt) => setPassword(evt.target.value)}
                 className="border text-sm border-gray-400 p-2 rounded-md w-full mt-3"
@@ -43,7 +46,7 @@ export default function Login() {
               <button
                 className="bg-green-900 text-white py-2 px-5 rounded-md text-sm mt-5"
                 onClick={() => login(username, password)}
-                id="loginbtn"
+                id="login-btn"
               >
                 Login
               </button>
