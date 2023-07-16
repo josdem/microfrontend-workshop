@@ -6,5 +6,6 @@ describe("validating home page", () => {
         cy.get('#addtocart_101').click()
         cy.get('#showcart').click()
         cy.get('#grand-total').should('have.text', '$1,260.00')
+        cy.get('#clear-cart').click()
     });
 });
