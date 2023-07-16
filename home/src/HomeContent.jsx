@@ -21,7 +21,7 @@ export default function HomeContent() {
             <div key={product.sku}>
                 <div className="flex">
                   <div className="flex-grow font-bold">
-                    <Link to={`/products/${product.sku}`}>
+                    <Link id={`product-${product.sku}`} to={`/products/${product.sku}`}>
                       <a>{product.name}</a>
                     </Link>
                   </div>
