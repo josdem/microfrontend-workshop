@@ -1,5 +1,6 @@
 {
   "url": "http://localhost:3000",
-  "email": "hello@cypress.io",
-  "body": "Fixtures are a great way to mock data for responses to routes"
+  "username": "josdem",
+  "password": "12345678",
+  "grandTotal": "$1,260.00"
 }
