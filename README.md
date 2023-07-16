@@ -15,6 +15,8 @@ where `frontend` could be:
 - `cart`
 - `atc`
 
+**Note:** In a different terminal window each `frontend`
+
 #### To run the project
 
 ```bash
