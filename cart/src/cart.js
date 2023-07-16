@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { BehaviorSubject } from 'rxjs';
 
-const SERVER_URL = 'http://localhost:8085'
+const SERVER_URL = 'https://shopping.josdem.io'
 
 export const jwt = new BehaviorSubject(null);
 export const cart = new BehaviorSubject(null);
