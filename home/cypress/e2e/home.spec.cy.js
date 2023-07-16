@@ -24,5 +24,6 @@ describe("validating home page", () => {
         cy.get('#username').type(this.data.username)
         cy.get('#password').type(this.data.password)
         cy.get('#login-btn').click()
+        cy.get('#product-101').click()
     })
 });
