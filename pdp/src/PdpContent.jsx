@@ -30,7 +30,7 @@ export default function PdpContent() {
                 {currency.format(product.price)}
               </div>
             </div>
-            <div id="add-to-cart-btn" ref={addToCart}></div>
+            <div ref={addToCart}></div>
           </div>
         </div>
       );
