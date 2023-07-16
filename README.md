@@ -31,10 +31,9 @@ cd frontend
 npm test
 ```
 
-
 #### To run test with [Cypress](https://www.cypress.io/)
 
 ```bash
 cd home
 npx cypress run --browser chrome
-```
+
