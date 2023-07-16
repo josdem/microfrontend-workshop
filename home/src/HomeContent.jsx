@@ -34,7 +34,7 @@ export default function HomeContent() {
               <button
                 className="bg-blue-500 hover:bg-blue-700 text-white text-sm font-bold py-2 px-4 rounded"
                 onClick={() => addToCart(product.sku)}
-                id={`addtocart_${product.sku}`}
+                id={`add-to-cart-${product.sku}`}
               >
                 Add to Cart
               </button>

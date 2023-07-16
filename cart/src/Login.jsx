@@ -16,7 +16,7 @@ export default function Login() {
     return (
         <>
           <span onClick={() => setShowLogin(!showLogin)}>
-            <i className="ri-fingerprint-line text-2xl" id="showlogin"></i>
+            <i className="ri-fingerprint-line text-2xl" id="show-login"></i>
           </span>
           {showLogin && (
             <div
@@ -43,7 +43,7 @@ export default function Login() {
               <button
                 className="bg-green-900 text-white py-2 px-5 rounded-md text-sm mt-5"
                 onClick={() => login(username, password)}
-                id="loginbtn"
+                id="login-btn"
               >
                 Login
               </button>
