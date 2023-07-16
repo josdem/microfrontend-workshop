@@ -6,8 +6,8 @@ export default function Login() {
     const loggedIn = useLoggedIn();
     const [showLogin, setShowLogin] = useState(false);
 
-    const [username, setUsername] = useState("josdem");
-    const [password, setPassword] = useState("12345678");
+    const [username, setUsername] = useState("");
+    const [password, setPassword] = useState("");
 
     if (loggedIn) {
         return null;
