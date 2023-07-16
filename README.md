@@ -30,3 +30,9 @@ npm start
 cd frontend
 npm test
 ```
+
+#### To see end-to-end tests with [Cypress](https://www.cypress.io/)
+
+```bash
+git checkout feature/cypress
+```
