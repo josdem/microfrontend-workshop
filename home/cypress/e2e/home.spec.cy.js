@@ -1,6 +1,6 @@
 describe("validating home page", () => {
 
-    before(function () {
+    beforeEach(function () {
         cy.fixture("test").then((data) => {
             this.data = data
         })
@@ -17,4 +17,12 @@ describe("validating home page", () => {
         cy.get('#grand-total').should('have.text', this.data.grandTotal)
         cy.get('#clear-cart').click()
     });
+
+    it("should add an item to the cart from product description page", function () {
+        cy.visit(this.data.url)
+        cy.get('#show-login').click()
+        cy.get('#username').type(this.data.username)
+        cy.get('#password').type(this.data.password)
+        cy.get('#login-btn').click()
+    })
 });
