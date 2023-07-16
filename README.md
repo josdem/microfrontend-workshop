@@ -1,27 +1,30 @@
 ## Microfrontend Workshop
 
-This project shows how to build microfronend using [React](https://react.dev/), [Webpack](https://webpack.js.org/) and [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript)
+This is a getting started project using [MFE](https://en.wikipedia.org/wiki/Microfrontend) implemented with [React](https://react.dev/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [jest](https://jestjs.io/)
 
-#### Requirements
-
-- [NodeJS](https://nodejs.org/en/) version `v18.16.0`
-
-**Note:** I recommed to use [NVM](https://github.com/nvm-sh/nvm) to manage NodeJS versions
-
-#### To build the project
+#### To build
 
 ```bash
-cd ${mfe-directory}
+cd frontend
 npm install
 ```
 
-where:
-- `${mfe-directory} ` is every micro frontend host and it could be these values:
-  - `home`
-  - `pdp`
+where `frontend` could be:
+- `home`
+- `pdp`
+- `cart`
+- `atc`
 
 #### To run the project
 
 ```bash
+cd frontend
 npm start
+```
+
+#### To run test with jest
+
+```bash
+cd frontend
+npm test
 ```
