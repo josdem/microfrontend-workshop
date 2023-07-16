@@ -1,6 +1,13 @@
 describe("validating home page", () => {
-    it("should add an item to the cart", () => {
-        cy.visit("http://localhost:3000")
+
+    before(function () {
+        cy.fixture("test").then((data) => {
+          this.data = data
+        })
+    })
+
+    it("should add an item to the cart", function () {
+        cy.visit(this.data.url)
         cy.get('#show-login').click()
         cy.get('#username').type('josdem')
         cy.get('#password').type('12345678')
