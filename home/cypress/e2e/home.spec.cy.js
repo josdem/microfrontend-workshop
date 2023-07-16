@@ -25,5 +25,9 @@ describe("validating home page", () => {
         cy.get('#password').type(this.data.password)
         cy.get('#login-btn').click()
         cy.get('#product-101').click()
+        cy.get('.bg-red-900').click()
+        cy.get('#show-cart').click()
+        cy.get('#grand-total').should('have.text', this.data.grandTotal)
+        cy.get('#clear-cart').click()
     })
 });
