@@ -32,6 +32,12 @@ cd frontend
 npm test
 ```
 
+### To format the project
+
+```bash
+npm run format
+```
+
 #### To see end-to-end tests with [Cypress](https://www.cypress.io/)
 
 ```bash
