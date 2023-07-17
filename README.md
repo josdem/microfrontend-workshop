@@ -10,6 +10,7 @@ npm install
 ```
 
 where `frontend` could be:
+
 - `home`
 - `pdp`
 - `cart`
@@ -31,9 +32,16 @@ cd frontend
 npm test
 ```
 
+### To format the project
+
+```bash
+npm run format
+```
+
 #### To run test with [Cypress](https://www.cypress.io/)
 
 ```bash
 cd home
 npx cypress run --browser chrome
+```
 

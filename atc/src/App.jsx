@@ -1,6 +1,6 @@
-import { render } from "solid-js/web";
+import { render } from "solid-js/web"
 
-import "./index.scss";
+import "./index.scss"
 
 const App = () => (
   <div class="mt-10 text-3xl mx-auto max-w-6xl">
@@ -9,5 +9,5 @@ const App = () => (
     <div>Language: JavaScript</div>
     <div>CSS: Tailwind</div>
   </div>
-);
-render(App, document.getElementById("app"));
+)
+render(App, document.getElementById("app"))
