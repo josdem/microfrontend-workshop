@@ -31,8 +31,22 @@ cd frontend
 npm test
 ```
 
-#### To see end-to-end tests with [Cypress](https://www.cypress.io/)
+#### To run test with [Playwright](https://playwright.dev/)
 
 ```bash
-git checkout feature/cypress
+cd home
+npx playwright test --project chromium
+```
+
+**Note:**
+To disbale headless mode:
+
+```bash
+export HEADLESS=false
+```
+
+#### To see integrated reports
+
+```bash
+npx playwright show-report
 ```

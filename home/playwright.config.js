@@ -9,7 +9,7 @@ module.exports = defineConfig({
   workers: process.env.CI ? 1 : undefined,
   reporter: 'html',
   use: {
-    headless: false,
+    headless: process.env.HEADLESS !== "false",
     trace: 'on-first-retry',
   },
 
