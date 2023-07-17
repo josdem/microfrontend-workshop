@@ -1,0 +1,15 @@
+{
+  "name": "microfrontend-workshop",
+  "version": "1.0.0",
+  "description": "This is a getting started project using [MFE](https://en.wikipedia.org/wiki/Microfrontend) implemented with [React](https://react.dev/), [JavaScript](https://developer.mozilla.org/en-US/docs/Web/JavaScript) and [jest](https://jestjs.io/)",
+  "main": "index.js",
+  "scripts": {
+    "format": "prettier --write ."
+  },
+  "keywords": [],
+  "author": "josdem",
+  "license": "ISC",
+  "devDependencies": {
+    "prettier": "^3.0.0"
+  }
+}
