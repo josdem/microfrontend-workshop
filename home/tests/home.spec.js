@@ -10,4 +10,5 @@ test('should add an item to the cart', async ({ page }) => {
   await page.locator('#add-to-cart-101').click()
   await page.locator('#show-cart').click()
   await expect(page.locator('#grand-total')).toHaveText('$1,260.00')
+  await page.locator('#clear-cart').click()
 })
