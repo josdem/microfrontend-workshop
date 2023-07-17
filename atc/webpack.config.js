@@ -1,7 +1,7 @@
-const HtmlWebPackPlugin = require("html-webpack-plugin");
-const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin");
+const HtmlWebPackPlugin = require("html-webpack-plugin")
+const ModuleFederationPlugin = require("webpack/lib/container/ModuleFederationPlugin")
 
-const deps = require("./package.json").dependencies;
+const deps = require("./package.json").dependencies
 module.exports = (_, argv) => ({
   output: {
     publicPath: "http://localhost:3003/",
@@ -47,8 +47,8 @@ module.exports = (_, argv) => ({
         cart: "cart@http://localhost:3002/remoteEntry.js",
       },
       exposes: {
-        './AddToCart': './src/AddToCart.jsx',
-        './placeAddToCart': './src/placeAddToCart.js',
+        "./AddToCart": "./src/AddToCart.jsx",
+        "./placeAddToCart": "./src/placeAddToCart.js",
       },
       shared: {
         ...deps,
@@ -62,4 +62,4 @@ module.exports = (_, argv) => ({
       template: "./src/index.html",
     }),
   ],
-});
+})

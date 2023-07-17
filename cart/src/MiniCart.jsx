@@ -1,19 +1,19 @@
-import React, { useEffect, useState } from "react";
+import React, { useEffect, useState } from "react"
 
-import { cart, clearCart } from "./cart";
-import { currency } from "home/products";
+import { cart, clearCart } from "./cart"
+import { currency } from "home/products"
 
 export default function MiniCart() {
-  const [items, setItems] = useState(undefined);
-  const [showCart, setShowCart] = useState(false);
+  const [items, setItems] = useState(undefined)
+  const [showCart, setShowCart] = useState(false)
 
   useEffect(() => {
-    setItems(cart);
-    return cart.subscribe(val => setItems(val));
-  }, []);
+    setItems(cart)
+    return cart.subscribe((val) => setItems(val))
+  }, [])
 
   if (!items) {
-    return null;
+    return null
   }
 
   return (
@@ -41,35 +41,22 @@ export default function MiniCart() {
               {items.map((item) => (
                 <React.Fragment key={item.sku}>
                   <div>{item.name}</div>
-                  <div className="text-right">
-                    {currency.format(item.price)}
-                  </div>
+                  <div className="text-right">{currency.format(item.price)}</div>
                 </React.Fragment>
               ))}
               <div></div>
               <div></div>
               <div></div>
-              <div>
-                {currency.format(
-                  items.reduce((a, v) => a + v.price, 0)
-                )}
-              </div>
+              <div>{currency.format(items.reduce((a, v) => a + v.price, 0))}</div>
             </div>
             <div className="flex">
               <div className="flex-grow">
-                <button
-                  id="clear-cart"
-                  className="bg-white border border-green-800 text-green-800 py-2 px-5 rounded-md text-sm"
-                  onClick={clearCart}
-                >
+                <button id="clear-cart" className="bg-white border border-green-800 text-green-800 py-2 px-5 rounded-md text-sm" onClick={clearCart}>
                   Clear Cart
                 </button>
               </div>
               <div className="flex-end">
-                <button
-                  className="bg-green-900 text-white py-2 px-5 rounded-md text-sm"
-                  onClick={clearCart}
-                >
+                <button className="bg-green-900 text-white py-2 px-5 rounded-md text-sm" onClick={clearCart}>
                   Checkout
                 </button>
               </div>
@@ -78,5 +65,5 @@ export default function MiniCart() {
         </>
       )}
     </>
-  );
+  )
 }

@@ -10,6 +10,7 @@ npm install
 ```
 
 where `frontend` could be:
+
 - `home`
 - `pdp`
 - `cart`
