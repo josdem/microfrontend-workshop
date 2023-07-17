@@ -10,6 +10,7 @@ npm install
 ```
 
 where `frontend` could be:
+
 - `home`
 - `pdp`
 - `cart`
@@ -49,4 +50,10 @@ export HEADLESS=false
 
 ```bash
 npx playwright show-report
+```
+
+### To format the project
+
+```bash
+npm run format
 ```

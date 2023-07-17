@@ -1,7 +1,7 @@
-import { render } from "solid-js/web";
+import { render } from "solid-js/web"
 
-import AddToCart from "./AddToCart";
+import AddToCart from "./AddToCart"
 
 export default function placeAddToCart(el, id) {
-  render(() => <AddToCart id={id} />, el);
+  render(() => <AddToCart id={id} />, el)
 }
