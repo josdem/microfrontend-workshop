@@ -7,4 +7,5 @@ test('should add an item to the cart', async ({ page }) => {
   await page.locator('#username').fill('josdem')
   await page.locator('#password').fill('12345678')
   await page.locator('#login-btn').click()
+  await page.locator('#add-to-cart-101').click()
 })
