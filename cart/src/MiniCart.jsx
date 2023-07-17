@@ -47,7 +47,7 @@ export default function MiniCart() {
               <div></div>
               <div></div>
               <div></div>
-              <div>{currency.format(items.reduce((a, v) => a + v.price, 0))}</div>
+              <div id="grand-total">{currency.format(items.reduce((a, v) => a + v.price, 0))}</div>
             </div>
             <div className="flex">
               <div className="flex-grow">
