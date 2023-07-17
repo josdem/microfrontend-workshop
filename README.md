@@ -36,3 +36,9 @@ npm test
 ```bash
 git checkout feature/cypress
 ```
+
+#### To see end-to-end tests with [Playwright](https://playwright.dev/)
+
+```bash
+git checkout feature/playwright
+```
